@@ -15,6 +15,23 @@
 		<!-- STYLE-CSS -->
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
-	<body></body>
+	<body>
+		<div class="wrapper" id="app">
+			<div class="container mt-5">
+				<div class="text-center">
+					<h1>{{message}}</h1>
+					<hr />
+					<div class="input-group mb-3 w-50 mx-auto">
+						<input type="text" class="form-control" placeholder="Add todo" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="newTask.text" />
+						<button class="btn btn-outline-success" type="button" id="button-addon2" @click="addNewTask()">Add</button>
+					</div>
+				</div>
+				<ul class="todo-list">
+					<li class="todo-element" v-for="todoObject in todoList">{{todoObject.text}}</li>
+					<span class="todo-action"></span>
+				</ul>
+			</div>
+		</div>
+	</body>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </html>
