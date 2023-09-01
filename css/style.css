@@ -7,3 +7,6 @@
 	margin-bottom: 0.5rem;
 	background-color: rgb(152, 239, 239);
 }
+.item-done {
+	text-decoration: line-through;
+}

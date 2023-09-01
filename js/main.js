@@ -29,8 +29,17 @@ createApp({
 		};
 	},
 	methods: {
+		clearTodo(index) {
+			this.todoList.splice(index, 1);
+		},
+
 		addNewTask() {
-			this.todoList.push(this.newTask);
+			const newTodoCopy = {
+				...this.newTask,
+				// text: this.addNewTaskCopy.text,
+				// done: this.addNewTaskCopy.done,
+			};
+			this.todoList.unshift(newTodoCopy);
 		},
 	},
 }).mount("#app");
